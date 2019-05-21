@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>NYT API</title>
+    <style>
+      #navColor {
+          background-color: rgb(33, 50, 90) !important;
+          height: 200px;
+      }
+
+      .card-header {
+          font-size: 20px;
+      }
+
+
+      #bottom {
+          font-size: 16px;
+      }
+  </style>
+</head>
+
+<body>
+
+
+    <!-- New York Times Header and Icon -->
+    <div class="container">
+        <div class="row">
+            <nav class="col-12 navbar navbar-light text-center d-flex justify-content-center p-5 mb-5" id="navColor">
+                <a class="navbar-brand text-white" href="#" style="font-size:3rem;font-weight: bold">
+                    <img src="http://www.preoccupiedterritory.com/wp-content/uploads/2014/07/Times-T-logo.jpg"
+                        width="60" height="60" class="d-inline-block align-top" alt="" id="logo" class="">
+                    New York Times Search
+                </a>
+            </nav>
+        </div>
+        <!-- Search Parameters Container -->
+        <div class="card">
+            <div class="card-header">
+                <img class="d-inline-block align-top" style="height: 20px; width: 20px;" src="parameters-icon.png"
+                    alt="parameters-icon">
+                Search Parameters
+            </div>
+            <div class="card-body">
+                <!-- Search Term Input Box -->
+                <blockquote class="blockquote mb-0">
+                    <p>Search Term:</p>
+                    <input id="user-query" type="text" class="form-control" placeholder="" aria-label=""
+                        aria-describedby="button-addon2">
+                    <br>
+                    <!-- Number of Records Dropdown Box -->
+                    <p>Number of Records to Retrieve:</p>
+                    <div class="input-group">
+                        <select class="custom-select" id="limit" aria-label="Example select with button addon">
+                            <option selected></option>
+                            <option value="1">1</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                        </select>
+                        <div class="input-group-append">
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Start Year Box -->
+                    <p>Start Year (Optional):</p>
+                    <input id="start-year" type="text" class="form-control" placeholder="" aria-label=""
+                        aria-describedby="button-addon2">
+                    <br>
+                    <!-- End Year Box -->
+                    <p>End Year (Optional):</p>
+                    <input id="end-year" type="text" class="form-control" placeholder="" aria-label=""
+                        aria-describedby="button-addon2">
+                    <br>
+                    <!-- Search Button -->
+                    <a id="search-button" class="text-decoration-none text-dark mb-3" href="#">
+                        <img class="d-inline-block align-left" src="search-icon.png" alt="search-icon"
+                            style="width:40px; height: 40px">
+                        Search
+
+                    </a>
+                    <!-- Clear Results -->
+                    <a id="clear" class="text-decoration-none text-dark ml-4 mb-3" href="#">
+                        <img class="d-inline-block align-left" src="trash.png" alt="trash-icon"
+                            style="width: 20px; height: 20px">
+                        Clear Results
+                    </a>
+                </blockquote>
+            </div>
+        </div>
+        <!-- End of Search Parameters Container-->
+
+        <!-- Top Articles Section for Results -->
+        <div class="card mt-5">
+            <div class="card-header">
+                <img class="d-inline-block align-top" src="LIST-icon.png" alt="list" style="width: 20px; height: 20px">
+                Top Articles
+            </div>
+            <div class="card-body">
+                <blockquote id="search-results" class="blockquote mb-0">
+                    <!-- prepend results here -->
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</body>
+<!-- Footer -->
+<footer class="container">
+    <div class="card  border-left-0 border-right-0  border-bottom-0 mt-5">
+        <div id="bottom" class="card-header border border-white bg-white text-center">Made with lots and lots of love
+            &hearts;</div>
+    </div>
+</footer>
+
+</html>
